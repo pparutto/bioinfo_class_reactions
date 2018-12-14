@@ -66,3 +66,4 @@ for reac_name, particip in reacts.items():
     res += "+".join([str(particips[p][1]) + ":" + str(particips[p][0])
             for p in particip.right])
     print(res)
+print("lol")
