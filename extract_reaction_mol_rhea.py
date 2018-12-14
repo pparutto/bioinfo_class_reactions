@@ -31,8 +31,8 @@ def read_reaction(f):
     line = f.readline()
     particip = Participant()
     while line != '' and not line.startswith("</bp:biochemicalReaction>"):
-        if line.startswith(" <bp:RIGHT"):
-            particip.right.append(line.split('"')[1])
+        if line.endswith(" <bp:RIGHT"):
+            particip.left.append(line.split('#')[1])
         elif line.startswith(" <bp:LEFT"):
             particip.left.append(line.split('"')[1])
         line = f.readline()
